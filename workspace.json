@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "xan-book-react": "apps/xan-book-react",
+    "xan-book-server": "apps/xan-book-server"
+  }
+}

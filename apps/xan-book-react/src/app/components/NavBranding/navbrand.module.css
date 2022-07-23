@@ -1,0 +1,40 @@
+/* Your styles goes here. */
+.navbar {
+  display: flex;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background: linear-gradient(90deg, #7d4ad3, #2db6c5);
+  color: #6b7280;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+:hover {
+  color: #374151;
+}
+
+.navbar-container {
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+.navbar-branding {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar-branding:hover {
+  cursor: pointer;
+}

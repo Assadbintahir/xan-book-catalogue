@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "c4bafef1-e52d-40dd-b1fa-adfa5dd91b88",
+		"name": "xan-book-catalogue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4434309"
+	},
+	"item": [
+		{
+			"name": "GET Health Check Endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/health-check",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"health-check"
+					]
+				},
+				"description": "Health Check Endpoint"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/books",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Book by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/book/dc9f0e08-117f-42cd-bbca-ffc8c4e1125e",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"dc9f0e08-117f-42cd-bbca-ffc8c4e1125e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

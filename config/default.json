@@ -1,0 +1,8 @@
+{
+  "server": {
+    "env": "development",
+    "port": 5000,
+    "domain": "xan-book-catalogue",
+    "name": "xan-book-catalogue"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/xan-book-react/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/xan-book-react",
+        "index": "apps/xan-book-react/src/index.html",
+        "baseHref": "/",
+        "main": "apps/xan-book-react/src/main.tsx",
+        "polyfills": "apps/xan-book-react/src/polyfills.ts",
+        "tsConfig": "apps/xan-book-react/tsconfig.app.json",
+        "assets": ["apps/xan-book-react/src/favicon.ico", "apps/xan-book-react/src/assets"],
+        "styles": ["apps/xan-book-react/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "xan-book-react:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "xan-book-react:build:development"
+        },
+        "production": {
+          "buildTarget": "xan-book-react:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/xan-book-react/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/xan-book-react"],
+      "options": {
+        "jestConfig": "apps/xan-book-react/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
